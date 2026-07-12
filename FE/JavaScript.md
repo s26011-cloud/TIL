@@ -138,3 +138,98 @@ const result = greturn() <--(10)
 console.log(result)
 ```
 함수가 자기 기능을 수행한 자기의 호출문 자리에 리턴값을 두고 간다.
+
+## 이벤트
+
+### 구문 기본 형태
+```button.onclick = handleClick```:
+    타겟.on이벤트명 = 이벤트핸들러함수
+
+## addEventListener
+
+### 구문 기본 형태
+
+```
+target.addEventListener('click',function(){})
+```
+## createElement, appenddChild
+
+### createElement란
+- 지정된 이름의 HTML 요소를 만들어 반환해주는 역할을 한다.
+
+### createElement 구문 형태
+
+```
+document.createElement('div')
+```
+HTML 요소가 만들어지고 반환 되었다고 해서 바로 웹 브라우저 화면에 추가되진 않는다.
+
+웹 브라우저 화면에 추가하려면 dom에 직접 추가해야 한다.
+
+## dom에 추가하는 과정
+
+### appenChild
+
+### 구문 형태
+
+```
+target.appenChild(자식을 추가할 요소)
+```
+### 예제
+
+```
+const p = document.createElement("p")
+document.body.appendChild(p)
+```
+
+## 입력 요소 값 읽기
+
+### 요소의 텍스트에 접근하고 싶다
+- textContent or innerText
+
+### 사용자가 요소에 입력한 값에 접근하고 싶다
+- value
+
+from에 포함된 입력 요소의 naem을 통해 각 입력 요소에 접근할 수 있다.
+
+## 삼항 연산
+- 세 개의 항을 이용해 결과를 반환하는 연산이다
+
+- 보통 if문의 단축 형태로 사용되기 때문에, 삼항 조건 연산식이라고도 부른다.
+
+### 기본 구문
+
+```
+3 > 2 ? "참" : "거짓"
+```
+
+## 타이머를 만들자
+
+### setTimeout
+- 정해진 시간이 지나고 나면 주어진 함수를 실행 해주는 타이머 메소드이다.
+
+#### 사용방법
+
+```
+setTimeout(실행할 함수, ms 단위의 시간)
+```
+
+### setInterval
+- 일정한 시간 간격에 따라 함수를 반복 실행할 수 있도록 해주는 타이머 메소드이다.
+
+#### 사용방법
+
+```
+setInterval(반복 실행할 함수,ms 단위의 시간)
+```
+
+### clearInterval
+- setInterval 메소드가 호출되어 반복 실행할 함수 타이머를 등록하면 0이 아닌숫자를 반환하는데 숫자는 타이머의 ID를 의미하며, 이를 claerInterval 메소드에 전달하면 타이머 반복 실행이 취소된다.
+
+## classList
+
+### Element.classList
+- 웹 요소(Element)로부터 클래스 콜렉션을 반환하는 읽기 전용 속성이다.
+
+## localStorage
+- 현재 도메인의 로컬 저장소에 접근할 수 있게 해준다.
